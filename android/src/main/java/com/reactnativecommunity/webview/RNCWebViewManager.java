@@ -1296,7 +1296,7 @@ public class RNCWebViewManager extends SimpleViewManager<WebView> {
           androidPermission = Manifest.permission.CAMERA;
         } else if(requestedResource.equals(PermissionRequest.RESOURCE_PROTECTED_MEDIA_ID)) {
           // always permit drm
-          request.grant(requestedResources);
+          request.grant(requestedResource);
         }
         // TODO: RESOURCE_MIDI_SYSEX, RESOURCE_PROTECTED_MEDIA_ID.
 
