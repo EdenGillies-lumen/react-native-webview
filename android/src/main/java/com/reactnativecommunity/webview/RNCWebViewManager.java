@@ -1568,6 +1568,11 @@ public class RNCWebViewManager extends SimpleViewManager<WebView> {
     }
 
     @Override
+    protected void onWindowVisibilityChanged(int visibility) {
+        if (visibility != View.GONE && visibility != View.INVISIBLE) super.onWindowVisibilityChanged(visibility);
+    }
+
+    @Override
     public boolean onTouchEvent(MotionEvent event) {
       if (this.nestedScrollEnabled) {
         requestDisallowInterceptTouchEvent(true);
